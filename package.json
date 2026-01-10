@@ -1,0 +1,23 @@
+{
+  "name": "automatizacioncompleta",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cxva97/AutomatizacionCompletaConCypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cxva97/AutomatizacionCompletaConCypress/issues"
+  },
+  "homepage": "https://github.com/Cxva97/AutomatizacionCompletaConCypress#readme",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^10.2.0"
+  }
+}

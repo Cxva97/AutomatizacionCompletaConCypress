@@ -41,7 +41,7 @@ describe('Flujo de Registro', () => {
         cy.get('[data-at="submit-signup"]').click();
      });
     
-     it.only('Registro con usuario ya existente', () => {  
+     it('Registro con usuario ya existente', () => {  
         cy.get('[name="email"]').type('cxva97@hotmail.com');
         cy.get('[name="name"]').type('cesar');
         cy.get('[name="password"]').type('12345678');

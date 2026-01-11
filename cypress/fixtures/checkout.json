@@ -1,0 +1,19 @@
+{
+    "nombre" : "maria",
+    "apellido" : "guzman",
+    "correo" : "prueba@test.com",
+    "direccion" : "guayaquil",
+    "pais" : "Ecuador",
+    "num_tarjeta": "4301822375925071",
+    "fech_exp": "2029-09",
+    "cvv" : "668",
+    
+    "num_tarj_inv" : "5329127549652373",
+    "fech_inv" : "2028-05",
+    "cvv_inv" : "495",
+
+    "tarj_insuf":"4577009248375940",
+    "fech_insuf": "2027-05",
+    "cvv_insuf": "254"
+
+}

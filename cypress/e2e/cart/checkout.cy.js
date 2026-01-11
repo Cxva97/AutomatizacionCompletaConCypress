@@ -28,7 +28,6 @@ describe('flujos completo de comprar', () => {
         })
     });
 
-
     it('checkout completo INVALIDO', () => {
         cy.addToCart();
         //continuando con el checkout

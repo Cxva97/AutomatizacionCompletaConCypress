@@ -50,4 +50,18 @@ Cypress.Commands.add('validarSavedText', (alias, selector) => {
                 });
         });
  })
+
+Cypress.Commands.add('validateDate', (selector) => { 
+        cy.get(selector).first().invoke('text').then((fecha)=>{
+            const date = new Date();
+            const dias = String(date.getDate()).padStart(2,'0');
+            const meses = ['ene','feb','mar','abr','may','jun','jul','ago','sept','oct',
+                            'nov','dic'];
+            const mes = meses[date.getMonth()];
+            const anio = String(date.getFullYear()).slice(-2);
+            const expectedDate = `${dias} ${mes}, ${anio}`;
+cy.log(fecha)
+            expect(fecha.trim().toLowerCase()).to.equal(expectedDate);
+        });        
+ })
  

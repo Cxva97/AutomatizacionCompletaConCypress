@@ -15,10 +15,7 @@ it('Add Favorites using API', () => {
             Authorization : `Bearer ${token}`
         },
         body: {
-            "products": "12",
-        },
-        body: {
-            "products": "20",
+            "products": ["12","20"]
         }
      })
     }) 

@@ -65,3 +65,13 @@ cy.log(fecha)
         });        
  })
  
+Cypress.Commands.add('loginAPI',(email,password)=>{
+     cy.request({
+        method: 'POST',
+        url: 'https://api.laboratoriodetesting.com/api/v1/auth/login',
+        body: {
+            "email": email,
+            "password" : password
+        }
+     })
+}) 

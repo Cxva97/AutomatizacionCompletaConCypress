@@ -1,3 +1,4 @@
+import * as CheckoutPage from '../../support/selectors/checkout-page'
 describe('Historial de compras', () => {
     beforeEach(() => {
         cy.visit('auth/login');
@@ -11,15 +12,15 @@ describe('Historial de compras', () => {
             cy.contains('button', 'Ir al checkout')
             .should('be.visible')
             .click()
-            cy.get('[name="name"]').type(cliente.nombre);
-            cy.get('[name="lastname"]').type(cliente.apellido);
-            cy.get('[name="email"]').type(cliente.correo);
-            cy.get('[name="address"]').type(cliente.direccion);
-            cy.get('[name="country"]').select(cliente.pais);
-            cy.get('[name="nameHolder"]').type(cliente.nombre);
-            cy.get('[name="cardNumber"]').type(cliente.num_tarjeta);
-            cy.get('[name="expiryDate"]').type(cliente.fech_exp);
-            cy.get('[name="securityCode"]').type(cliente.cvv);
+            cy.get(CheckoutPage.NAME_INPUT).type(cliente.nombre);
+            cy.get(CheckoutPage.LASTNAME).type(cliente.apellido);
+            cy.get(CheckoutPage.EMAIL).type(cliente.correo);
+            cy.get(CheckoutPage.ADDRESS).type(cliente.direccion);
+            cy.get(CheckoutPage.COUNTRY).select(cliente.pais);
+            cy.get(CheckoutPage.NAMEHOLDER).type(cliente.nombre);
+            cy.get(CheckoutPage.CARDNUMBER).type(cliente.num_tarjeta);
+            cy.get(CheckoutPage.EXPDATE).type(cliente.fech_exp);
+            cy.get(CheckoutPage.CVVCODE).type(cliente.cvv);
             cy.contains('Completar Pago').click();
             cy.visit('my-account');
             cy.get('.underline.text-black.font-bold').first().click();

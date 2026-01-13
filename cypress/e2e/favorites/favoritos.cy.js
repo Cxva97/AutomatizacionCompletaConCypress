@@ -1,8 +1,11 @@
 const cookie = Cypress.env('cookie')
 describe('Flujo favoritos', () => {
     beforeEach(() => {
-        cy.setCookie('__AUTH-TOKEN-APP', cookie,
-            { path: '/'});
+        /*cy.setCookie('__AUTH-TOKEN-APP', cookie,
+            { path: '/'});*/
+        cy.visit('auth/login')
+        cy.login();
+        
     });
 
     it('Agregar productos a favoritos', () => {

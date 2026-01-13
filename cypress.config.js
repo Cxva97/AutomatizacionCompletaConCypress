@@ -9,7 +9,7 @@ module.exports = defineConfig({
     },
     baseUrl: "https://www.laboratoriodetesting.com/",
     retries: {
-      openMode: 2, // intentos en modo abierto
+      openMode: 1, // intentos en modo abierto
       runMode: 1 // intentos en modo ejecucion, terminal
     },
   },

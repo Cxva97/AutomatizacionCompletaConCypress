@@ -1,9 +1,11 @@
+import * as CartPage from '../../support/selectors/cart-page'
 describe('flujos de Carrito de compras', () => {
     beforeEach(() => {
         cy.visit('/auth/login');
+        cy.login();
     });
     
-    /*it('Agregar producto', () => {
+    it('Agregar producto', () => {
         cy.get('[id="outsiders"]')
         .find('a[href="/products/mancuernas-recubiertas-de-neopreno"]')
         .closest('article')
@@ -11,16 +13,15 @@ describe('flujos de Carrito de compras', () => {
         cy.get('@seccionAirelibre')
         .contains('button', 'Añadir al carrito')
         .click()
-        cy.get('[data-at="cart-opener-mobile"]').click();
-    });*/
+        cy.get(CartPage.CART).click();
+    });
 
    it('Agregar un producto', () => {
-        cy.login();
         cy.addToCart();
     });
 
 
-   /* it('Agregar un producto', () => {
+   it('Agregar un producto', () => {
         //buscar desde destacados
         cy.get('a[href="/products/mancuernas-recubiertas-de-neopreno"]')
         .closest('article')
@@ -37,8 +38,7 @@ describe('flujos de Carrito de compras', () => {
         .contains('button', 'Añadir al carrito')
         .click()
         //abre el carrito y verifica
-        cy.get('[data-at="cart-opener-mobile"]').click();
-        cy.get('.cart-grid.items-center').should('contain.text','Mancuerna')  
-    }); */
-
+        cy.get(CartPage.CART).click();
+        cy.get(CartPage.INFO).should('contain.text','Mancuerna')  
+    }); 
 });

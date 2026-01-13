@@ -1,5 +1,4 @@
 # Automatización Completa - Cypress
-
 ## 📋 Descripción General
 
 Este proyecto es un conjunto de pruebas automatizadas de extremo a extremo (E2E) y pruebas de API desarrolladas con **Cypress**. El proyecto automatiza casos de prueba para la aplicación web del Laboratorio de Testing, incluyendo funcionalidades de autenticación, carrito de compras, órdenes, favoritos y pruebas de API.
